@@ -83,6 +83,11 @@
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f1"
+                     displayName="FormatTools"
+                     projectFiles="true"
+                     kind="TEST">
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -123,6 +128,21 @@
       </item>
       <item path="PhidgetClass.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
       <item path="lib/CaptorMessage.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="lib/CaptorMessage.h" ex="false" tool="3" flavor2="0">
@@ -276,6 +296,189 @@
       </item>
       <item path="PhidgetClass.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <item path="lib/CaptorMessage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/CaptorMessage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/FormatTools.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/FormatTools.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/StatusMessage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/StatusMessage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/autolink.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/features.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/forwards.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/json.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/json_batchallocator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/json_internalarray.inl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/json_internalmap.inl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/json_reader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/json/json_value.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/json/json_valueiterator.inl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/json_writer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/json/reader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/value.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/json/writer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Controller.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/JsonController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/JsonController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/JsonResponse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/JsonResponse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Mutex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Mutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Request.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Request.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/RequestHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Response.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Response.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Server.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Server.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Session.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Session.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Sessions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Sessions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/StreamResponse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/StreamResponse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/UploadFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/UploadFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/WebController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/WebController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/WebSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/WebSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/WebSockets.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/mongoose/WebSockets.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/mongoose/mongoose.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/mongoose/mongoose.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="simple.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Local" type="1">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>../../phidget</pElem>
+          </incDir>
+          <commandLine>-DHAS_JSONCPP=OFF</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>../../phidget/libiconv.so</linkerLibFileItem>
+            <linkerLibFileItem>../../phidget/libphidget21.so</linkerLibFileItem>
+            <linkerLibFileItem>../../phidget/libusb-1.0.so</linkerLibFileItem>
+          </linkerLibItems>
+          <commandLine>-pthread</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="MainController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PhidgetClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PhidgetClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
       <item path="lib/CaptorMessage.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="lib/CaptorMessage.h" ex="false" tool="3" flavor2="0">

@@ -10,6 +10,7 @@
 
 #include <string>
 #include <stdio.h>
+#include <string.h>
 
 class FormatTools { // Static
 public:
@@ -18,17 +19,31 @@ public:
     static std::string dtostr(double in, int precision) {
         std::string s;
         char buffer[100];
+        char comp[100] = "%.";
         char bufferFormat[10];
         
-        sprintf(bufferFormat, "\%.%dlf", precision);
+        sprintf(bufferFormat, "%d", precision);
+        
+        strcat(comp, bufferFormat);
+        strcat(comp, "lf");
         
         
-        sprintf(buffer,bufferFormat,in);
+        sprintf(buffer,comp,in);
         s = buffer;
         
         return s;
     }
+    
+    static std::string itostr(int in)
+    {
+        char buffer[10];
+        std::string tmp;
 
+        sprintf(buffer, "%d", in);
+        tmp = buffer;
+        
+        return tmp;
+    }
 };
 
 #endif	/* FORMATTOOLS_H */

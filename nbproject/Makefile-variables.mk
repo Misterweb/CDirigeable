@@ -22,6 +22,14 @@ CND_ARTIFACT_PATH_Release=dist/Release/Linino-Linux-x86/cdirigeable
 CND_PACKAGE_DIR_Release=dist/Release/Linino-Linux-x86/package
 CND_PACKAGE_NAME_Release=cdirigeable.tar
 CND_PACKAGE_PATH_Release=dist/Release/Linino-Linux-x86/package/cdirigeable.tar
+# Local configuration
+CND_PLATFORM_Local=GNU-Linux-x86
+CND_ARTIFACT_DIR_Local=dist/Local/GNU-Linux-x86
+CND_ARTIFACT_NAME_Local=cdirigeable
+CND_ARTIFACT_PATH_Local=dist/Local/GNU-Linux-x86/cdirigeable
+CND_PACKAGE_DIR_Local=dist/Local/GNU-Linux-x86/package
+CND_PACKAGE_NAME_Local=cdirigeable.tar
+CND_PACKAGE_PATH_Local=dist/Local/GNU-Linux-x86/package/cdirigeable.tar
 #
 # include compiler specific variables
 #

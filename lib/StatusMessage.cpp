@@ -6,6 +6,8 @@
  */
 
 #include "StatusMessage.h"
+#include "FormatTools.h"
+#include <stdlib.h>
 
 StatusMessage::StatusMessage() {
     Message = "";
@@ -25,6 +27,9 @@ StatusMessage::~StatusMessage() {
 }
 
 void StatusMessage::Serialize() {  
+
     root["Message"] = Message;
-    root["Code"] = Code;
+    root["Code"] = FormatTools::itostr(Code);
+    
+    
 }

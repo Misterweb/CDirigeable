@@ -32,16 +32,16 @@ private:
     double Altitude;
     double Heading;
     double Velocity;
-    StatusMessage gpsStatus;
+    StatusMessage* gpsStatus;
     
     // Temp
     double measuredTemperature;
-    StatusMessage tempStatus;
+    StatusMessage* tempStatus;
     
     // Common
     std::string Date;
     std::string dirigeableId;
-    StatusMessage messStatus;
+    StatusMessage* messStatus;
     
     Json::Value root;
     
@@ -102,11 +102,11 @@ public:
         this->dirigeableId = dirigeableId;
     }
 
-    StatusMessage GetGpsStatus() const {
+    StatusMessage* GetGpsStatus() const {
         return gpsStatus;
     }
 
-    void SetGpsStatus(StatusMessage gpsStatus) {
+    void SetGpsStatus(StatusMessage* gpsStatus) {
         this->gpsStatus = gpsStatus;
     }
 
@@ -118,19 +118,19 @@ public:
         this->measuredTemperature = measuredTemperature;
     }
 
-    StatusMessage GetMessStatus() const {
+    StatusMessage* GetMessStatus() const {
         return messStatus;
     }
 
-    void SetMessStatus(StatusMessage messStatus) {
+    void SetMessStatus(StatusMessage* messStatus) {
         this->messStatus = messStatus;
     }
 
-    StatusMessage GetTempStatus() const {
+    StatusMessage* GetTempStatus() const {
         return tempStatus;
     }
 
-    void SetTempStatus(StatusMessage tempStatus) {
+    void SetTempStatus(StatusMessage* tempStatus) {
         this->tempStatus = tempStatus;
     }
 

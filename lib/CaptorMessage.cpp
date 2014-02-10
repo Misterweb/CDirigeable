@@ -17,6 +17,10 @@ CaptorMessage::CaptorMessage() {
     measuredTemperature = 0.0;
     Date = "";
     dirigeableId = "0";
+    
+    gpsStatus = NULL;
+    tempStatus = NULL;
+    messStatus = NULL;
 }
 
 CaptorMessage::CaptorMessage(const CaptorMessage& orig) {
@@ -27,20 +31,23 @@ CaptorMessage::~CaptorMessage() {
 
 void CaptorMessage::Serialize() {
     
-    tempStatus.Serialize();
-    gpsStatus.Serialize();
-    messStatus.Serialize();
+    if(tempStatus != NULL)
+        tempStatus->Serialize();
+    if(gpsStatus != NULL)
+        gpsStatus->Serialize();
+    if(messStatus != NULL)
+        messStatus->Serialize();
     
     // GPS
     root["altitude"] = FormatTools::dtostr(Altitude, 6);
-    root["latitude"] = Latitude;
-    root["longitude"] = Longitude;
-    root["heading"] = Heading;
-    root["velocity"] = Velocity;
-    root["measuredTemperature"] = measuredTemperature;
+    root["latitude"] = FormatTools::dtostr(Latitude,6);
+    root["longitude"] = FormatTools::dtostr(Longitude,6);
+    root["heading"] = FormatTools::dtostr(Heading,1);
+    root["velocity"] = FormatTools::dtostr(Velocity,1);
+    root["measuredTemperature"] = FormatTools::dtostr(measuredTemperature,4);
     root["date"] = Date;
     root["dirigeableId"] = dirigeableId;
-    root["temperatureSensorStatus"] = tempStatus.GetRoot();
-    root["gpsStatus"] = gpsStatus.GetRoot();
-    root["message"] = messStatus.GetRoot();
+    root["temperatureSensorStatus"] = tempStatus->GetRoot();
+    root["gpsStatus"] = gpsStatus->GetRoot();
+    root["message"] = messStatus->GetRoot();
 }

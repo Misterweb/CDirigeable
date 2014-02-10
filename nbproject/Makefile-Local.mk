@@ -14,16 +14,16 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=mips-openwrt-linux-gcc
-CCC=mips-openwrt-linux-g++
-CXX=mips-openwrt-linux-g++
+CC=gcc
+CCC=g++
+CXX=g++
 FC=gfortran
-AS=mips-openwrt-linux-as
+AS=as
 
 # Macros
-CND_PLATFORM=Linino-Linux-x86
+CND_PLATFORM=GNU-Linux-x86
 CND_DLIB_EXT=so
-CND_CONF=Release
+CND_CONF=Local
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 

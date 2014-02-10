@@ -45,43 +45,75 @@ class MainController : public WebController {
                 msg.SetDate(date);
                 msg.SetMeasuredTemperature(20);
                 
-                msg.SetMessStatus(mMess);
+                msg.SetMessStatus(&mMess);
                 
                 tmpMess.SetMessage(pClass.isTempOnline() ? "Plugged" : "Unplugged");
                 tmpMess.SetCode(pClass.isTempOnline() ? 0 : 2);
-                msg.SetTempStatus(tmpMess);
+                msg.SetTempStatus(&tmpMess);
                 
                 gpsMess.SetMessage(pClass.isGpsOnline() ? "Plugged" : "Unplugged");
                 gpsMess.SetCode(pClass.isGpsOnline() ? 0 : 2);
-                msg.SetGpsStatus(gpsMess);    
+                msg.SetGpsStatus(&gpsMess);    
                 
                 msg.Serialize();
                 
-                response << writer.write(msg.GetRoot()) << endl;
+                response << writer.write(msg.GetRoot());
             }    
         }
         
         void dispatcher(Request &request, StreamResponse &response) {
-            std::string s;
-            s = request.get("cmdType", "UTF-8");
+            std::string cmdType, body;
+            Json::Value root;
+            Json::Reader reader;
+            bool success = false;
+            body = request.getData();
             
-            if(s == "GetInfos")
+            success = reader.parse(body, root);
+            
+            if(success) {
+                cmdType = root.get("cmdType", "GetInfos").asString();
+            } else {
+                cmdType = "GetInfos";
+            }
+            
+            
+            if(cmdType == "GetInfos")
             {
                 getInfos(request,response);
             } 
-            else if(s == "Up")
+            else if(cmdType == "Up")
             {
-                
+                std::cout << "1" << std::endl;
             }
-            else
+            else if(cmdType == "Left")
+            {
+                std::cout << "3" << std::endl;
+            }
+            else if(cmdType == "Down")
+            {
+                std::cout << "2" << std::endl;
+            }
+            else if(cmdType == "Right")
+            {
+                std::cout << "4" << std::endl;
+            }
+            else if(cmdType == "GoToGPSPosition")
             {
                 // TODO
+            }
+            else if(cmdType == "Forward")
+            {
+                std::cout << "5" << std::endl;
+            }
+            else if(cmdType == "Back")
+            {
+                std::cout << "6" << std::endl;
             }
         }
 
         void setup()
         {
-            addRoute("GET", "/", MainController, index);
+            addRoute("POST", "/", MainController, index);
             
             pClass.start();
             cout << "Ready." << endl;
