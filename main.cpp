@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
     
 
     while (1) {    
-        usleep(75);
+        usleep(150);
     };
 
     return 0;

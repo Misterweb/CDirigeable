@@ -61,6 +61,14 @@ class MainController : public WebController {
             }    
         }
         
+        void respondSuccess(Request &request, StreamResponse &response) {
+            StatusMessage success("OK", 200);
+            
+            success.Serialize();
+            
+            response << writer.write(success.GetRoot());
+        }
+        
         void dispatcher(Request &request, StreamResponse &response) {
             std::string cmdType, body;
             Json::Value root;
@@ -84,18 +92,22 @@ class MainController : public WebController {
             else if(cmdType == "Up")
             {
                 std::cout << "1" << std::endl;
+                respondSuccess(request,response);
             }
             else if(cmdType == "Left")
             {
                 std::cout << "3" << std::endl;
+                respondSuccess(request,response);
             }
             else if(cmdType == "Down")
             {
                 std::cout << "2" << std::endl;
+                respondSuccess(request,response);
             }
             else if(cmdType == "Right")
             {
                 std::cout << "4" << std::endl;
+                respondSuccess(request,response);
             }
             else if(cmdType == "GoToGPSPosition")
             {
@@ -104,10 +116,12 @@ class MainController : public WebController {
             else if(cmdType == "Forward")
             {
                 std::cout << "5" << std::endl;
+                respondSuccess(request,response);
             }
             else if(cmdType == "Back")
             {
                 std::cout << "6" << std::endl;
+                respondSuccess(request,response);
             }
         }
 
